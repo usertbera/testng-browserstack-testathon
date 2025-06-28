@@ -1,13 +1,12 @@
 package com.browserstack;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 import utils.OrderTestData;
-import utils.CredentialsUtil;
+import utils.LoginData;
 
 import java.time.Duration;
 import java.util.List;
@@ -20,8 +19,8 @@ public class BStackOrderFlowTest extends SeleniumTest {
         // Login
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
-        loginPage.selectUsername(CredentialsUtil.USERNAME);
-        loginPage.selectPassword(CredentialsUtil.PASSWORD);
+        loginPage.selectUsername(LoginData.USERNAME);
+        loginPage.selectPassword(LoginData.PASSWORD);
         loginPage.submitLogin();
         wait.until(ExpectedConditions.visibilityOfElementLocated(OrderTestData.USERNAME_BUTTON_SELECTOR));
         Assert.assertTrue(loginPage.getUserNameButton().isDisplayed(), "User should be logged in");
