@@ -1,1 +1,28 @@
+# .gitignore for Java Maven project
+
+# Maven target directory
 /target/
+
+# IntelliJ IDEA
+/.idea/
+/*.iml
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Build output
+*.class
+
+# Other
+*.swp
