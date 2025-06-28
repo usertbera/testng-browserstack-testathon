@@ -34,7 +34,7 @@ public class MainPage {
     }
 
     public void goTo() {
-        driver.get("https://bstackdemo.com");
+        driver.get("https://kolkata.bugbash.live/");
     }
 
     public void searchFor(String term) {
@@ -128,5 +128,10 @@ public class MainPage {
             return title;
         }
         return null;
+    }
+
+    public OrdersPage goToOrders() {
+        driver.findElement(By.id("orders")).click();
+        return new OrdersPage(driver);
     }
 }

@@ -58,8 +58,8 @@ public class BStackOrderFlowTest extends SeleniumTest {
         ));
 
         // Go to Orders and verify
-        OrdersPage ordersPage = new OrdersPage(driver);
-        ordersPage.goTo();
+        MainPage mainPageAfterOrder = new MainPage(driver);
+        OrdersPage ordersPage = mainPageAfterOrder.goToOrders();
         wait.until(driver1 -> ordersPage.getOrderTitles().size() > 0);
         List<org.openqa.selenium.WebElement> orderTitles = ordersPage.getOrderTitles();
         boolean found = orderTitles.stream().anyMatch(e -> e.getText().contains(productName));

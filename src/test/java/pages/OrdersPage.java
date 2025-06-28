@@ -9,9 +9,12 @@ public class OrdersPage {
     private WebDriver driver;
 
     // Locators
-    private By orderItems = By.cssSelector(".order-item, .main [class*='order']");
-    private By orderTitles = By.cssSelector(".order-item .title, .main [class*='order'] strong");
-    private By orderDates = By.cssSelector(".order-item .date, .main [class*='order'] [class*='date']");
+    private By orderGroups = By.cssSelector(".order");
+    private By orderPlacedLabels = By.cssSelector(".order-info .label");
+    private By orderPlacedValues = By.cssSelector(".order-info .value");
+    private By orderTitles = By.cssSelector(".a-fixed-left-grid-col.a-col-right .a-row");
+    private By orderDescriptions = By.cssSelector(".a-fixed-left-grid-col.a-col-right .a-row:nth-child(2)");
+    private By orderPrices = By.cssSelector(".a-fixed-left-grid-col.a-col-right .a-row .a-size-small.a-color-price");
 
     public OrdersPage(WebDriver driver) {
         this.driver = driver;
@@ -21,15 +24,27 @@ public class OrdersPage {
         driver.get("https://kolkata.bugbash.live/orders");
     }
 
-    public List<WebElement> getOrderItems() {
-        return driver.findElements(orderItems);
+    public List<WebElement> getOrderGroups() {
+        return driver.findElements(orderGroups);
+    }
+
+    public List<WebElement> getOrderPlacedLabels() {
+        return driver.findElements(orderPlacedLabels);
+    }
+
+    public List<WebElement> getOrderPlacedValues() {
+        return driver.findElements(orderPlacedValues);
     }
 
     public List<WebElement> getOrderTitles() {
         return driver.findElements(orderTitles);
     }
 
-    public List<WebElement> getOrderDates() {
-        return driver.findElements(orderDates);
+    public List<WebElement> getOrderDescriptions() {
+        return driver.findElements(orderDescriptions);
+    }
+
+    public List<WebElement> getOrderPrices() {
+        return driver.findElements(orderPrices);
     }
 } 
