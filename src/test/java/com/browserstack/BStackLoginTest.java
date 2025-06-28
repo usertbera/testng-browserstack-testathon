@@ -22,9 +22,8 @@ public class BStackLoginTest extends SeleniumTest {
         loginPage.submitLogin();
         
 
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		//wait.until(ExpectedConditions.visibilityOf(loginPage.getLogoutButton()));
-        Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(loginPage.getUserNameButton()));
 
         
 

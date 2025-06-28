@@ -12,7 +12,7 @@ public class CartPage {
     private By cartItems = By.cssSelector(".float-cart .shelf-item");
     private By cartProductTitles = By.cssSelector(".float-cart .shelf-item__details .title");
     private By cartSubtotal = By.cssSelector(".float-cart .sub-price__val, .float-cart .subtotal");
-    private By checkoutButton = By.cssSelector(".float-cart button, .float-cart [cursor='pointer']");
+    private By checkoutButton = By.cssSelector(".buy-btn");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;

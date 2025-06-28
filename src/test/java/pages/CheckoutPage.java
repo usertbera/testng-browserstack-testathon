@@ -2,18 +2,17 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class CheckoutPage {
     private WebDriver driver;
 
     // Locators
-    private By firstNameField = By.cssSelector("input[placeholder='First Name'], input[aria-label='First Name']");
-    private By lastNameField = By.cssSelector("input[placeholder='Last Name'], input[aria-label='Last Name']");
-    private By addressField = By.cssSelector("input[placeholder='Address'], input[aria-label='Address']");
-    private By stateField = By.cssSelector("input[placeholder='State/Province'], input[aria-label='State/Province']");
-    private By postalCodeField = By.cssSelector("input[placeholder='Postal Code'], input[aria-label='Postal Code']");
-    private By submitButton = By.cssSelector("button[type='submit'], button[cursor='pointer']");
+    private By firstNameField = By.id("firstNameInput");
+    private By lastNameField = By.id("lastNameInput");
+    private By addressField = By.id("addressLine1Input");
+    private By stateField = By.id("provinceInput");
+    private By postalCodeField = By.id("postCodeInput");
+    private By submitButton = By.id("checkout-shipping-continue");
 
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
