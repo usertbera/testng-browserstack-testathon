@@ -1,5 +1,5 @@
-userName: tapabratabera_WL3IF6
-accessKey: NEQBzzyTkFJ5s4xepeYc
+userName: ayushipriyadarsh_xvNp0w
+accessKey: JZeQh7HbijMoCWTJ9MGc
 platforms:
   - os: Windows
     osVersion: 10
@@ -16,4 +16,4 @@ platforms:
 browserstackLocal: true
 testObservability: true
 buildName: browserstack-build-1
-projectName: BrowserStack Sample
+projectName: Testathon_Debuggers

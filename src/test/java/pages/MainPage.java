@@ -108,7 +108,7 @@ public class MainPage {
 
     public void goToFavourites() {
         driver.findElement(favouritesTab).click();
-        driver.get("https://bstackdemo.com/favourites");
+        driver.get("https://kolkata.bugbash.live/favourites");
     }
 
     public void removeFavouriteByIndex(int index) {

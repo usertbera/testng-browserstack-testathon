@@ -20,7 +20,7 @@ public class LoginPage {
     }
 
     public void goTo() {
-        driver.get("https://bstackdemo.com/signin");
+        driver.get("https://kolkata.bugbash.live/signin");
     }
 
     public void openLoginForm() {

@@ -9,7 +9,7 @@ public class BStackDemoTest extends SeleniumTest {
     @Test
     public void addProductToCart() throws Exception {
         // navigate to bstackdemo
-        driver.get("https://www.bstackdemo.com");
+        driver.get("https://kolkata.bugbash.live");
 
         // Check the title
         Assert.assertTrue(driver.getTitle().matches("StackDemo"));
